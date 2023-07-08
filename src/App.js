@@ -5,49 +5,39 @@ const categories = [
     id: 1,
     title: "Hats",
   },
+  {
+    id: 2,
+    title: "Jackets",
+  },
+  {
+    id: 3,
+    title: "Hats",
+  },
+  {
+    id: 4,
+    title: "Hats",
+  },
+  {
+    id: 5,
+    title: "Hats",
+  },
 ];
 
 function App() {
   return (
     <div className="categories-container">
-      <div className="category-container">
-        {/* <img /> */}
-        <div className="category-body-container">
-          {categories.map((category) => {
-            return <h2 key={category.id}>{category.title} </h2>;
-          })}
-          <h2>Hats</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className="category-container">
-        {/* <img /> */}
-        <div className="category-body-container">
-          <h2>Jackets</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className="category-container">
-        {/* <img /> */}
-        <div className="category-body-container">
-          <h2>Sneakers</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className="category-container">
-        {/* <img /> */}
-        <div className="category-body-container">
-          <h2>Womens</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className="category-container">
-        {/* <img /> */}
-        <div className="category-body-container">
-          <h2>Mens</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
+      {categories.map(({ title }) => {
+        return (
+          <div className="category-container">
+            <div className="background-image" />
+            {/* <img /> */}
+            <div className="category-body-container">
+              <h2>{title}</h2>
+              <p>Shop Now</p>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
