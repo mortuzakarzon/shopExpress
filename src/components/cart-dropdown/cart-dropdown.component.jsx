@@ -1,5 +1,6 @@
 import Button from "../button/button.component";
-import "./cart-dropdown.styles.scss";
+import "./cart-dropdown.styles.scss"
+
 
 
 const CartDropdown = () => {
